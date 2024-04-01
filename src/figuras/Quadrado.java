@@ -4,17 +4,17 @@ public class Quadrado {
 	private double lado;
 
 	protected Quadrado(double lado) {
-		if(lado > 0) {
+		if(lado <= 0) {
 			throw new FiguraException("Quadrado não pode ter lado igual ou inferior a zero");
 		}
 		this.lado = lado;
 	}
 	
-	protected double area() {
+	public double area() {
 		return lado * lado;
 	}
 	
-	protected double perimetro() {
+	public double perimetro() {
 		return 4 * lado;
 	}
 	
@@ -23,7 +23,7 @@ public class Quadrado {
 		return "O quadrado criado tem lados de tamanho " + lado;
 	}
 
-	//Getter e Setter
+	// Getter e Setter
 	
 	protected double getLado() {
 		return lado;
@@ -32,5 +32,7 @@ public class Quadrado {
 	protected void setLado(double lado) {
 		this.lado = lado;
 	}
+	
+	
 
 }

@@ -5,7 +5,7 @@ public class Circulo {
 	public static double PI = 3.14;
 
 	protected Circulo(double raio) {
-		if(raio > 0) {
+		if(raio <= 0) {
 			throw new FiguraException("Círculo não pode ter raio igual ou inferior a zero");
 		}
 		this.raio = raio;
@@ -24,7 +24,7 @@ public class Circulo {
 		return "O círculo criado tem raio " + raio;
 	}
 	
-	//Getter e Setter
+	// Getter e Setter
 
 	protected double getRaio() {
 		return raio;

@@ -4,7 +4,7 @@ public class Retangulo {
 	private double base, altura;
 
 	protected Retangulo(double base, double altura) throws FiguraException{
-		if(base > 0 || altura > 0) {
+		if(base <= 0 || altura <= 0) {
 			throw new FiguraException("Retângulo não pode ter base ou altura iguais ou inferiores a zero");
 		}
 		this.base = base;
@@ -24,7 +24,7 @@ public class Retangulo {
 		return "O retângulo criado tem altura " + altura + " e base " + base;
 	}
 	
-	//Getters e Setters
+	// Getters e Setters
 
 	protected double getBase() {
 		return base;
